@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS bookings (
     guest_name TEXT NOT NULL,
     email TEXT,
     phone TEXT,
-    source TEXT DEFAULT 'Diretta',          -- Diretta, Booking, Airbnb, Expedia, Altro
+    source TEXT DEFAULT 'Booking.com',          -- Diretta, Booking, Airbnb, Expedia, Altro
     room TEXT DEFAULT 'Camera 1',           -- nome/identificativo alloggio
     status TEXT DEFAULT 'Confermata',       -- Confermata, In attesa, Annullata
     check_in DATE NOT NULL,
@@ -129,7 +129,7 @@ def rooms_list() -> List[str]:
     with closing(get_conn()) as conn:
         rows = conn.execute("SELECT DISTINCT room FROM bookings ORDER BY room").fetchall()
     existing = [r[0] for r in rows]
-    defaults = ["Camera 1", "Camera 2", "Appartamento"]
+    defaults = ["Maestrale", "Libeccio", "Scirocco", "Grecale"]
     for d in defaults:
         if d not in existing:
             existing.append(d)
