@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 # 41° Parallelo — App personale gestione prenotazioni (Streamlit + SQLite + iCal Booking)
 # ---------------------------------------------------------------------------------
 # Istruzioni rapide (Windows/Mac/Linux)
@@ -11,8 +13,6 @@ ics
 #    (rinomina il file in 41_parallelo_app.py se necessario)
 # 3) Il database locale è "bookings_41_parallelo.db" nella stessa cartella.
 # ---------------------------------------------------------------------------------
-
-from __future__ import annotations
 
 import re
 import sqlite3
