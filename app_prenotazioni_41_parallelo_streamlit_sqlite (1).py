@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 # 41° Parallelo — App personale gestione prenotazioni (Streamlit + SQLite + iCal Booking)
 # ---------------------------------------------------------------------------------
 # Istruzioni rapide (Windows/Mac/Linux)
